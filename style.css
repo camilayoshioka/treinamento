@@ -1,0 +1,32 @@
+h1, h3 {
+    text-align: center;
+}
+
+body {
+    background-color: #C0D6E8;
+}
+
+.btn {
+    background-color: purple;
+}
+
+.colorido {
+    background-color: red;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.item {
+    background-color: #FFF7FC;
+    text-align: center;
+    margin: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
