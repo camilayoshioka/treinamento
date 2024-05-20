@@ -3,7 +3,7 @@ h1, h3 {
 }
 
 body {
-    background-color: #888d92;
+    background-color: #E1AFD1;
 }
 
 .btn {
@@ -32,6 +32,8 @@ body {
 
 .menu {
     display: none;
+    padding-left: 20px;
+    flex-wrap: wrap;
 }
 
 .show {
@@ -41,3 +43,5 @@ body {
 #botao-menu {
     cursor: pointer;
 }
+
+
