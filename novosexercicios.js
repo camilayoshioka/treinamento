@@ -24,7 +24,7 @@ let form = document.querySelector('#form1');
 let inpText = document.querySelector('#inpText');
 let botaoEnviar = document.querySelector('#enviar');
 let textao = document.querySelector('#textArea')
-let botao = enviar.addEventListener('click', submitForm, false);
+let botao = botaoEnviar.addEventListener('click', consertaerro, false);
 
 let lengthArea = document.querySelector('#lengthArea');
 
@@ -34,16 +34,15 @@ function validateTextao() {
     }    
 }
 
-
-/*function consertaerro(botao) {
+function consertaerro(botaoEnviar) {
     if (botaoEnviar && inpText.value=='') {
         alert('Preencha o campo');
+        submitForm(event);
     } else {
         alert('Enviado');
+        submitForm(event);
     }
 }
-consertaerro(botao);
-*/
 
 inpText.style.backgroundColor = '#FFF9D0';
 
@@ -123,7 +122,7 @@ function imgPreview(event) {
     gallery.innerHTML = '';
     let files = event.target.files;
     for (let i=0; i < files.length; i++) {
-        if (files[i].size > 20000) {
+        if (files[i].size > 500000) {
             alert('imagem muito grande')
         } else {
             let reader = new FileReader();
@@ -169,4 +168,6 @@ function contador() {
     setTimeout(contador, 2000);
 }
 contador();
+
+
 
