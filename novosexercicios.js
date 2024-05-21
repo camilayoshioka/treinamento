@@ -24,7 +24,7 @@ let form = document.querySelector('#form1');
 let inpText = document.querySelector('#inpText');
 let botaoEnviar = document.querySelector('#enviar');
 let textao = document.querySelector('#textArea')
-let botao = botaoEnviar.addEventListener('click', consertaerro, false);
+let botao = botaoEnviar.addEventListener('click', consertaerro(botaoEnviar), false);
 
 let lengthArea = document.querySelector('#lengthArea');
 
@@ -35,9 +35,10 @@ function validateTextao() {
 }
 
 function consertaerro(botaoEnviar) {
+    console.log(botaoEnviar, 'Botao')
     if (botaoEnviar && inpText.value=='') {
         alert('Preencha o campo');
-        submitForm(event);
+
     } else {
         alert('Enviado');
         submitForm(event);
@@ -48,7 +49,7 @@ inpText.style.backgroundColor = '#FFF9D0';
 
 
 
-form.action = 'teste.php';
+//form.action = 'teste.php';
 console.log(inpText);
 
 //Text Area
