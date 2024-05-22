@@ -35,7 +35,6 @@ function validateTextao() {
 }
 
 function consertaerro(botaoEnviar) {
-    console.log(botaoEnviar, 'Botao')
     if (botaoEnviar && inpText.value=='') {
         alert('Preencha o campo');
 
@@ -88,9 +87,9 @@ function radioTeste(event) {
         alert('Female');
     }
 }
-for(let i=0; i < radio.length; i++) {
-    radio[i].addEventListener('click', radioTeste, false);
-}
+radio.forEach((radio) => {
+    radio.addEventListener('click', radioTeste)
+})
 
 //Select
 
@@ -159,7 +158,7 @@ novoBotao.addEventListener('click', contador, false);
 console.log('world');
 */ 
 
-let i=0;
+/*let i=0;
 function contador() {
     i++;
     console.log(i);
@@ -168,7 +167,7 @@ function contador() {
     }
     setTimeout(contador, 2000);
 }
-contador();
+contador();*/
 
 //Aula 29
 
@@ -181,12 +180,12 @@ function showDb() {
         if (ajax.status === 200 && ajax.readyState === 4){
             let resposta = JSON.parse(ajax.responseText);
             let car = resposta.car;
-            for (let i=0; i < car.length; i++){
+            for(let i=0; i< car.length; i++){
                 console.log(car[i].year);
-            }
+            }         
         }    
     }
-    ajax.send();
+    ajax.send()
 }
 
 botaoDb.addEventListener('click', showDb, false);
