@@ -55,3 +55,4 @@ app.prototype.result=function () {
 function test(){
     console.log('Função teste')
 }
+
