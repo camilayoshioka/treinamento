@@ -24,7 +24,7 @@ let form = document.querySelector('#form1');
 let inpText = document.querySelector('#inpText');
 let botaoEnviar = document.querySelector('#enviar');
 let textao = document.querySelector('#textArea')
-let botao = botaoEnviar.addEventListener('click', consertaerro, false);
+let botao = botaoEnviar.addEventListener('click', consertaerro(botaoEnviar), false);
 
 let lengthArea = document.querySelector('#lengthArea');
 
@@ -37,7 +37,7 @@ function validateTextao() {
 function consertaerro(botaoEnviar) {
     if (botaoEnviar && inpText.value=='') {
         alert('Preencha o campo');
-        submitForm(event);
+
     } else {
         alert('Enviado');
         submitForm(event);
@@ -48,7 +48,7 @@ inpText.style.backgroundColor = '#FFF9D0';
 
 
 
-form.action = 'teste.php';
+//form.action = 'teste.php';
 console.log(inpText);
 
 //Text Area
@@ -87,9 +87,9 @@ function radioTeste(event) {
         alert('Female');
     }
 }
-for(let i=0; i < radio.length; i++) {
-    radio[i].addEventListener('click', radioTeste, false);
-}
+radio.forEach((radio) => {
+    radio.addEventListener('click', radioTeste)
+})
 
 //Select
 
@@ -158,7 +158,7 @@ novoBotao.addEventListener('click', contador, false);
 console.log('world');
 */ 
 
-let i=0;
+/*let i=0;
 function contador() {
     i++;
     console.log(i);
@@ -167,7 +167,26 @@ function contador() {
     }
     setTimeout(contador, 2000);
 }
-contador();
+contador();*/
 
+//Aula 29
 
+let botaoDb = document.querySelector('#btnDb');
+
+function showDb() {
+    let ajax = new XMLHttpRequest();
+    ajax.open('GET', 'db.json');
+    ajax.onreadystatechange = function() {
+        if (ajax.status === 200 && ajax.readyState === 4){
+            let resposta = JSON.parse(ajax.responseText);
+            let car = resposta.car;
+            for(let i=0; i< car.length; i++){
+                console.log(car[i].year);
+            }         
+        }    
+    }
+    ajax.send()
+}
+
+botaoDb.addEventListener('click', showDb, false);
 
