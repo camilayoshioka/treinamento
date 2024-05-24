@@ -7,7 +7,7 @@ function enviaFormulario(event) {
     const btn = document.querySelector('#btn')
     const result = document.querySelector('#result')
     const progress = document.querySelector('.progress')
-    ajax.open('POST','controller.php')
+    ajax.open('POST','teste.php')
     ajax.onloadstart = function () {
         btn.value = 'Carregando...'
     }

@@ -4,5 +4,17 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
-  }
+  },
+  "name": "1.0",
+  "version": "1.0.0",
+  "description": "Repositório de treinamento durante o estágio em desenvolvimento de e-commerce",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC"
 }
