@@ -1,6 +1,6 @@
-import ClassJob from "./ClassJob"
+import ClassJob from "./ClassJob.js"
 
-export default class ClassPerson extends class ClassJob {
+export default class ClassPerson extends ClassJob {
 
     constructor() {
         super()
@@ -11,8 +11,13 @@ export default class ClassPerson extends class ClassJob {
         this.age = age
     }
 
+    getEmpresa() {
+        return 'get empresa da ClassPerson'
+    }
+
+
     getData() {
-        return 'O '+this.name+ ' possui'+ this.age+ ' e trabalha na empresa'+ super.getEmpresa()
+        return this.name+ ' possui '+ this.age+ ' e trabalha na empresa '+ this.getEmpresa()
     }
 
 }

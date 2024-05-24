@@ -1,4 +1,4 @@
-export default class {ClassJob} {
+export default class ClassJob {
 
     constructor() {
         this.empresa = 'Pepsi'
@@ -6,10 +6,10 @@ export default class {ClassJob} {
     }
 
     getEmpresa() {
-        return this.empresa;
+        return this.empresa
     }
 
-    getFuncao() ;{
+    getFuncao() {
         return this.funcao
     }
 }

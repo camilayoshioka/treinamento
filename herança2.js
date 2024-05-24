@@ -6,8 +6,7 @@ console.log(obj2. result())
 //Aula 36
 
 import {sum, percent, mult} from './modules/mymath.js'
-import {ClassPerson} from './class/ClassPerson.js'
-import {ClassJob} from './class/ClassJob.js'
+import ClassPerson from './class/ClassPerson.js'
 
 console.log(sum(1 ,3))
 console.log(mult(2 ,3))
