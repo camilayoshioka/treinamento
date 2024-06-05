@@ -155,7 +155,7 @@ let menu = document.querySelector('.menu');
 function toggle(event){
     if (menu.classList.contains("show")){
         menu.classList.remove('show');
-        botaoMenu.setAttribute('src', 'https://cdn-icons-png.flaticon.com/512/54/54447.png');
+        botaoMenu.setAttribute('background', 'https://cdn-icons-png.flaticon.com/512/54/54447.png');
     } else {
         menu.classList.add("show");
         botaoMenu.setAttribute('src', 'https://cdn-icons-png.flaticon.com/256/1/1193.png');

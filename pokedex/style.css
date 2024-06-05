@@ -1,8 +1,14 @@
 .result {
     max-width: 450px;
-    max-height: 250px;
+    max-height: 70px;
     box-shadow: 5px 10px #888888;
     border: 1px solid;
-    background-color: #D1D8C5;
 }
 
+.inicio {
+    max-width: 450px;
+    height: 70px;
+    box-shadow: 5px 10px #888888;
+    border: 1px solid;
+    background-color: #db1f9d;
+}
